@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب التوظيف</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- ربط خطوط Cairo -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome للرمز -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+
+
+    
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font: 2em sans-serif;
+font: size 30px; ;
+}
+.navbar{
+    
+background-color:rgb(16, 108, 145) ;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.196);
+padding: 1rem;
+transition: all 0.5s;
+  
+
+  }
+.dd{
+
+    background-color:rgb(135,206,235) ;
+}
+
+
+
+
+.job-card {
+    border: 1px solid oklch(89.755% 0.0001 271.152);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+   background-color:rgb(135,206,235) ;
+}
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm"id="navbarr">
+        <div class="container">
+            <a class="navbar-brand text-primary fw-bold" href="#">مكتب توضيف المهندس:بشار احمد فرحان</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                
+               
+                <ul class="navbar-nav me-auto">
+                <li class="nav-item ms-3 d-flex ">
+                    <a class="nav-link fw-bold" href="">الرئيسية</a>
+                </li>
+                <li class="nav-item ms-4">
+                    <a class="nav-link fw-bold" href="">من نحن</a>
+                </li>
+                <li class="nav-item ms-4">
+                 <a class="nav-link fw-bold" href="#jobs">الوظائف المتاحة</a>   
+                </li>
+                <li class="nav-item ms-5">
+                    <a class="nav-link fw-bold" href="">خدماتنا</a>
+                </li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-primary " href="">تواصل معنا</a>
+                                  
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="dd  text-center text-white  p-5">
+        <div class="container">
+            <h1 class="display-4">ابحث عن وظيفة أحلامك</h1>
+            <p class="lead">نحن نصلك بأفضل الفرص الوظيفية في السوق.</p>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="">
+        <div class="row">
+            <div class="col-md-6 mt-3 text-center  p-5">
+                <h2 class="fw-bold text-center">من نحن</h2>
+                <p class="  fw-bold text-primary"id="MainTitle">نحن مكتب توظيف رائد، متخصصون في ربط الكفاءات المتميزة بأفضل الشركات. مهمتنا هي مساعدتك في كل خطوة على طريقك المهني.</p>
+           <a href="#" class="btn btn-primary btn-lg" onclick="ChangeTitle()">اكتشف خدماتنا</a>                    
+ <a href="#" class="btn btn-secondary btn-lg" onclick="ChangeTheme()">شاهد عالمنا</a>
+            </div>
+            <div class="col-md-6 py-5 px-1 mt-auto">
+                <img src="صورة واتساب بتاريخ 1447-04-27 في 17.50.36_f6eeeac8.jpg" alt="صورة مكتب" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings Section -->
+    <section id="jobs" class="container mt-5">
+        <h2 class="text-center mb-4 fw-bold">الوظائف المتاحة</h2>
+        <input type="text" id="job-search" class="form-control mb-4" placeholder="ابحث عن وظيفة (مثال: مطور ويب)">
+        
+        <div id="job-listings" class="row">
+            <!-- سيتم إضافة الوظائف هنا بواسطة JavaScript -->
+        </div>
+    </section>
+
+    <section class="py-5 bg-light" id="contact">
+        <div class="container">
+            <h2 class="text-center mb-5" data-lang="contact_title">تواصل معنا</h2>
+            <form action="" class="mx-auto p-5 shadow-sm" style="background-color: #fff;">
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="name" class="form-label" data-lang="contact_name_label">الاسم الكامل</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="name" 
+                            required 
+                            placeholder="أدخل اسمك الكامل"
+                            data-lang="contact_name_placeholder"
+                        >
+                    </div>
+                    <div class="col-6">
+                        <label for="email" class="form-label" data-lang="contact_email_label">أدخل ايميلك</label>
+                        <input 
+                            type="email" 
+                            class="form-control" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="أدخل ايميلك"
+                            data-lang="contact_email_placeholder"
+                        >
+                        <small id="errorEmail" class="text-danger"></small>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="phone" class="form-label" data-lang="contact_phone_label">أدخل رقم الهاتف</label>
+                        <input 
+                            type="text" 
+                            class="form-control" 
+                            id="phone" 
+                            required 
+                            placeholder="أدخل رقم الهاتف"
+                            data-lang="contact_phone_placeholder"
+                        >
+                        <small id="ErrorPhone" class="text-danger"></small>
+                    </div>
+                    <div class="col-6">
+                        <label for="service" class="form-label" data-lang="contact_service_label">اختر الخدمة</label>
+                        <select id="service" class="form-select" required>
+                            <option value="" data-lang="contact_option_web">مواقع ويب</option>
+                            <option value="" data-lang="contact_option_app">تطبيقات الهاتف</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="file" class="form-label" data-lang="contact_file_label">رفع ملف</label>
+                        <input type="file" class="form-control" id="file" required>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label d-block" data-lang="contact_gender_label">الجنس</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="male" value="male" required>
+                            <label for="male" class="form-check-label" data-lang="contact_gender_male">ذكر</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" id="female" value="female" required>
+                            <label for="female" class="form-check-label" data-lang="contact_gender_female">أنثى</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label" data-lang="contact_message_label">ملاحظات</label>
+                    <textarea 
+                        class="form-control" 
+                        id="message" 
+                        rows="5" 
+                        required 
+                        placeholder="أكتب ملاحظاتك هنا ..."
+                        data-lang="contact_message_placeholder"
+                    ></textarea>
+                </div>
+
+                <div class="form-check form-check-inline mb-3">
+                    <input type="checkbox" class="form-check-input" id="agree" required>
+                    <label for="agree" class="form-check-label" data-lang="contact_terms">أوافق على جميع الشروط</label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" onclick="SendForm()" data-lang="contact_submit">ارسال</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="text-center bg-dark text-white p-3 mt-5">
+        <p>&copy; 2025 مكتب التوظيف. جميع الحقوق محفوظة.</p>
+        <p>مصم الويب المهندس :بشار احمد فرحان</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+<script>
+    
+    function ChangeTitle(){
+       var title = document.getElementById("MainTitle");
+       title.style.color = "blue";
+       title.textContent ="وضيفة احلامك مستقبل افضل";
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+    const jobs = [
+        { title: 'مطور واجهة أمامية (Frontend)', company: 'شركة تك', location: 'الرياض', type: 'دوام كامل' },
+        { title: 'مطور واجهة خلفية (Backend)', company: 'شركة برمجيات', location: 'جدة', type: 'دوام كامل' },
+        { title: 'مصمم جرافيك', company: 'وكالة إبداع', location: 'دبي', type: 'دوام جزئي' },
+        { title: 'مدير تسويق رقمي', company: 'شركة تسويق', location: 'الرياض', type: 'عن بعد' },
+        { title: 'مطور ويب متكامل (Full-Stack)', company: 'شركة ناشئة', location: 'جدة', type: 'دوام كامل' }
+    ];
+
+    const jobListingsContainer = document.getElementById('job-listings');
+    const jobSearchInput = document.getElementById('job-search');
+
+    function displayJobs(filteredJobs) {
+        jobListingsContainer.innerHTML = '';
+        filteredJobs.forEach(job => {
+            const jobCard = `
+                <div class="col-md-6">
+                    <div class="job-card">
+                        <h4>${job.title}</h4>
+                        <p><strong>الشركة:</strong> ${job.company}</p>
+                        <p><strong>الموقع:</strong> ${job.location}</p>
+                        <p><strong>نوع الدوام:</strong> ${job.type}</p>
+                        <a href="#" class="btn btn-primary">تقدم الآن</a>
+                    </div>
+                </div>
+            `;
+            jobListingsContainer.innerHTML += jobCard;
+        });
+    }
+
+    // عرض جميع الوظائف عند تحميل الصفحة
+    displayJobs(jobs);
+
+    // فلترة الوظائف عند الكتابة في حقل البحث
+    jobSearchInput.addEventListener('keyup', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const filteredJobs = jobs.filter(job => {
+            return job.title.toLowerCase().includes(searchTerm) || job.company.toLowerCase().includes(searchTerm);
+        });
+        displayJobs(filteredJobs);
+    });
+});
+
+    let isDark = false;
+    var colors = ["#e6f8ff", "#d6eaff", "#cce0ff", "#b3d1ff"];
+    function ChangeTheme(){
+        var navbar = document.getElementById("navbarr");
+        var home = document.getElementById("about");
+        var service = document.getElementById("hero");
+        var links = navbar.getElementsByTagName("a");
+         document.getElementById("job-listings")
+        var cards = [
+           
+           document.getElementById(".job-listings"),
+           
+        ]
+        if(!isDark){
+            navbarr.style.backgroundColor = "#1e1e1e";
+            home.style.backgroundColor = "#121212";
+           hero.style.backgroundColor ="#121212";
+            for(let i = 0; i < links.length; i++){
+                links[i].style.color = "#fff";
+            }
+            home.style.color = "#fff";
+            hero.style.color = "#fff";
+            for(let i = 0; i < cards.length; i++){
+                cards[i].style.backgroundColor = "#1e1e1e";
+                cards[i].style.color = "#fff";
+            }
+            colors = ["#002C3DFF", "#00172FFF", "#001E4AFF", "#000814FF"]
+            isDark = true;            
+        } else{
+            navbarr.style.backgroundColor = "#DADADAFF";
+            home.style.backgroundColor = "#FFFFFFFF";
+            about.style.backgroundColor ="#FFFFFFFF";
+             hero.style.backgroundColor ="#002C3DFF";
+            for(let i = 0; i < links.length; i++){
+                links[i].style.color = "#121212";
+            }
+            home.style.color = "#121212";
+            hero.style.color = "#121212";
+            for(let i = 0; i < cards.length; i++){
+                cards[i].style.backgroundColor = "#FFFFFFFF";
+                cards[i].style.color = "#121212";
+            }
+            colors = ["#e6f8ff", "#d6eaff", "#cce0ff", "#b3d1ff"]
+            isDark =false;            
+        }
+    }
+    function ColorCard(){
+        var cards = document.querySelectorAll("p");
+        let index = 0;
+        setInterval(() => {
+            for(let i = 0; i < cards.length; i++){
+                cards[i].style.backgroundColor = colors[index % colors.length];
+            }
+            index++;
+        }, 500);
+    }
+    ColorCard();
+    function SendForm() {
+
+      // تعريف الحقول التي سيتم التحقق منها
+      var email = document.getElementById("email");
+      var phone = document.getElementById("phone");
+      var errorEmail = document.getElementById("errorEmail");
+      var errorPhone = document.getElementById("errorPhone");
+
+      // تحقق من البريد الإلكتروني:
+      // إذا لم يكن الحقل فارغًا ولا يحتوي على رمز "@"، يتم عرض رسالة خطأ
+      if (email.value !== "" && !email.value.includes("@")) {
+        errorEmail.textContent = "البريد الإلكتروني غير صالح"; // رسالة الخطأ
+        email.style.borderColor = "red"; // تغيير لون الإطار إلى أحمر
+      }
+
+      // تحقق من رقم الهاتف:
+      // إذا كان الحقل يحتوي على قيمة لكنها ليست رقمية أو طولها أقل من 9 أرقام
+      if (phone.value && (isNaN(phone.value) || phone.value.length < 9)) {
+        errorPhone.textContent = "رقم الهاتف غير صالح"; // رسالة الخطأ
+        phone.style.borderColor = "red"; // تلوين الإطار بالأحمر
+     }
+
+    }
+
+</script>
+
+</body>
+</html>
+
+
+
